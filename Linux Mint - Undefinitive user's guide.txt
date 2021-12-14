@@ -1,0 +1,88 @@
+The current distribution of GNU/Linux, AKA "distro" that you are using, is called "Linux Mint."
+This distribution is a spin-off, or "fork" of ubuntu. Ubuntu us based on Debian, and was meant to be
+an easy way of accessing GNU/Linux to the masses. However, some developers disagreed with some decisions
+the Ubuntu team made, and they made their own version called Linux Mint. 
+However, all tutorials for Ubuntu will probably work for Linux Mint, since they are the same under the hood. 
+If you ever find a tutorial to do something on Debian or Ubuntu, chances are it will work on Linux Mint as well. 
+
+However, if you find tutorials for OpenSUSE, Arch, or Fedora, those tutorials might NOT work, as those are different
+distros under the hood. 
+
+What makes distros common with one another? Mainly, their package manager. The package manager is the installer
+for the operating system. It manages everything to do with the programs you install. There are a few package
+managers used by different distros, but Linux Mint uses the "apt" package manager. 
+
+Using the terminal is almost not needed anymore, but it is still the most efficient way of installing programs. 
+The terminal is much easier to use than you might expect, it is about as difficult as preforming minecraft commands. 
+
+Apt commands work like this:
+
+apt [install/search/remove/] [program name] [other arguments (normally starting with a "-" or "--"]
+
+For example, installing firefox is as simple as typing the command: 
+
+sudo apt install firefox
+
+What does that "sudo" mean at the beginning? It means "execute as root." It's basically the "run as administrator" 
+command in Windows. If a command doesn't work, and the error reads "permission denied" run the command again with
+sudo in front of it. Sudo should be used before every apt command. 
+
+Another simple way to install programs is using the "snap" installer. While this is another package manager, it is mostly
+used just for big compant programs. For example, to install Spotify on the system, I simply typed: 
+
+sudo snap install spotify 
+
+and it was installed within seconds. No need to find the spotify website and download the executable, just install and done. 
+Other items you might have to use snap instead of apt include: Discord, and chromium (linux's version of google chrome)
+
+Snaps are often slower than apt when it comes to launching programs, etc. So I always make sure to use apt
+before resorting to using the snap store. Spotify and discord are pretty much the only snap programs you need to install. 
+
+If you are unsure, you can always search "how to install X linux" or "how to install X ubuntu." I think you will
+find more tutorials searching for Ubuntu rather than Linux Mint. 
+
+to update your system, or search for if there are updates available, simply copy and paste the following:
+
+sudo apt update && sudo apt upgrade
+
+the "&&" designates to do both commands, but one at a time. This command searches for updates in apt, and then upgrades any
+it finds that can be upgraded. Sometimes "sudo apt full-upgrade" is used for upgrading the entire operating system. 
+It should be done about once a year-ish, but it is never necessary. 
+
+Of course, none of this is necessary, all can be done with Linux Mint's updater and package manager. 
+
+One command you might definitely, probably will need (at least I needed it a lot) is the command:
+
+pulseaudio -k
+
+If audio ever becomes loud, staticy, and "delayed," as in you pause the sound/video but it still plays for a little. 
+This means that the audio driver has shit the bed, and needs to be restarted. 
+Pulseaudio is the audio driver, and the "-k" argument kills the current session. 
+The only problem is that webpages need to be refreshed, and discord needs to be shut down and restarted. 
+Other than that it is totally fine to use whenever sound gets fucky. 
+
+As for menus, and linux itself, that can all be handled through hotkeys and the menu at the bottom. 
+At the bottom, there is a little apple logo, this is basically the start menu from windows. Everything is categorized
+accordingly, and it should be pretty self-explanitory. I have pinned several music apps to the activity bar already. 
+
+Hotkeys
+
+Some hotkeys are already pretty familiar with: 
+
+Alt+F4 = terminate program
+
+There are some other hotkeys that launch particular programs, the one probably most often used is:
+
+Ctrl+Alt+T = Launch Terminal
+
+This will open the terminal up, and you should be greeted with the apple logo and your computer's specs to see if it is
+done correctly. Afterwards you'll be able to type whatever command you'd like. You can even launch programs here. If 
+a program isn't functioning properly, or isn't launching at all, you can launch it in a terminal and get a full read-out
+of what may or may not be working. 
+
+CONNECTING TO WIFI
+
+I need to make sure this file is on your desktop for this reason. On the bottom of your screen, there is a little grey system tray in the corner. It is on the left, I couldn't figure out how to put it to the right. 
+you should see the clock, calendar, bluetooth, etc. As well as a little grey square on the very end of it. Clicking on that gray square opens the network manager to connect to select the wifi device from there. 
+Why is it a little gray square? Because the icon is gray, and so is the system tray, and I don't want to bother changing the icon to white so you can see it the one time you'll be using it. And, most importantly, it works. 
+
